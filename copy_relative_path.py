@@ -18,4 +18,4 @@ class CopyRelativePathCommand(sublime_plugin.TextCommand):
             sublime.status_message("Copied relative path")
 
     def is_enabled(self):
-        return self.view.file_name() and len(self.view.file_name()) > 0
+        return bool(self.view.file_name() and len(self.view.file_name()) > 0)
